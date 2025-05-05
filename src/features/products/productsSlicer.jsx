@@ -57,9 +57,12 @@ export const productsSlicer = createSlice({
           state.basketCount += countProduct.count;
         
         })
+      },
+      setCountProduct(state,actions){
+        state.countProducts = actions.payload;
       }
   },
 })
 
-export const {addCount,updateBasketCount} = productsSlicer.actions
+export const {addCount,updateBasketCount,setCountProduct} = productsSlicer.actions
 export default productsSlicer.reducer

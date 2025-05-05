@@ -10,10 +10,6 @@ function Detail({product}) {
     const {countProducts} = useSelector((state)=>state.products);
     const navigate = useNavigate();
 
-    useEffect(()=>{
-        dispatch(updateBasketCount())
-    },[countProducts])
-
   return (
     <div id='detail'>
         <div id='leftSide'>
@@ -29,11 +25,13 @@ function Detail({product}) {
             <div id='basketCount'>
                 <div id='detailRightTool'>
                     <div>
-                        <button className='addCountButton' onClick={()=>dispatch(addCount({id:id,method:'plus'}))}>+</button>
+                        <button className='addCountButton' onClick={()=>dispatch(addCount({id:id,method:'minus'}))}>-</button>
+                        
                         <p>
                             {countProducts.find((countProduct)=>countProduct.id == id)?.count||0}
                          </p>
-                        <button className='addCountButton' onClick={()=>dispatch(addCount({id:id,method:'minus'}))}>-</button>
+                         <button className='addCountButton' onClick={()=>dispatch(addCount({id:id,method:'plus'}))}>+</button>
+                        
                     </div>
                     <button id='goBasket' onClick={()=>navigate('/basket')}>Sepete Git</button>
                 </div>

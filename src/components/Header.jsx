@@ -11,8 +11,6 @@ import { Link } from 'react-router';
 function Header() {
     const {isMode,basketCount} = useSelector((state)=>state.products);
 
-    console.log(basketCount)
-
   return (
     <div id='header'>
         <div id='brand'>
