@@ -1,0 +1,58 @@
+#sideBasket {
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(245, 245, 245, 0.96);
+    position: fixed;
+    box-shadow: 0 0 10px black;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 1000;
+    animation-name: showBasket;
+    animation-duration: 0.3s;
+}
+
+@keyframes showBasket {
+    0% {
+        right: -40%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+#basketBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#totalAmount {
+    align-self: center;
+}
+
+#basketHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+#basketHead {
+    font-size: 20px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#close {
+    position: absolute;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}

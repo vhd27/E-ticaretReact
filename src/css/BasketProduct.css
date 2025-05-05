@@ -1,0 +1,33 @@
+.basketProduct {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.backetProductImage {
+    border-radius: 5px;
+    width: 80px;
+}
+
+.backetProductName {
+    margin: 0 3px 0 10px;
+}
+
+.backetProductPrice {
+    font-size: 1.1em;
+}
+
+.backetProductCount {
+    margin-right: 20px;
+    font-size: 1.1em;
+}
+
+.backetProductDelete {
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: rgb(255, 67, 67);
+}
